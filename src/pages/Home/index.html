@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <!-- https://developer.mozilla.org/zh-CN/docs/Web/HTTP/CSP -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self';style-src 'self' 'unsafe-inline'; script-src 'self'; img-src 'self' data"
+    />
+    <meta
+      http-equiv="X-Content-Security-Policy"
+      content="default-src 'self';style-src 'self' 'unsafe-inline'; script-src 'self'; img-src 'self' data"
+    />
+    <title>你好!</title>
+  </head>
+  <body>
+    <h1>你好!00</h1>
+    我们正在使用 Node.js <span id="node-version"></span>, Chromium
+    <span id="chrome-version"></span>, 和 Electron
+    <span id="electron-version"></span>.
+    <div id="btn">点我</div>
+    <input id="input" type="text" />
+    <button id="btn2">向D盘写入hello.txt文档</button> 
+    <button id="btn3">读取D盘hello.txt文档</button>
+    <div id="text"></div>
+    <button id="btn4">sendMessage</button>
+    <script src="./index.js"></script>
+  </body>
+</html>
