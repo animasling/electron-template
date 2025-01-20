@@ -8,11 +8,36 @@
     "start": "nodemon --exec electron-forge start",
     "package": "electron-forge package",
     "make": "electron-forge make",
-    "publish": "electron-forge publish"
+    "publish": "electron-forge publish",
+    "build": "electron-builder"
   },
   "keywords": [
     "electron"
   ],
+  "build": {
+    "appId": "com.electron.template",
+    "productName": "electron-template",
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "icon": "../public/icon.ico",
+      "target": [
+        {
+          "target": "nsis",
+          "arch": ["x64"]
+        }
+      ]
+    },
+    "dmg": {
+      "icon": "../public/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false, 
+      "perMachine": true,
+      "allowToChangeInstallationDirectory": true
+    }
+  },
   "author": "良月清秋",
   "license": "ISC",
   "devDependencies": {
@@ -26,6 +51,7 @@
     "@electron-forge/publisher-github": "^7.6.0",
     "@electron/fuses": "^1.8.0",
     "electron": "^33.2.1",
+    "electron-builder": "^25.1.8",
     "nodemon": "^3.1.9"
   },
   "dependencies": {
